@@ -44,7 +44,7 @@ R3F_LOG_CFG_objets_heliportables =
 	"Plane",
 	"Helicopter_Base_F",
 	"Land_Cargo20_grey_F",
-	"Land_Cargo40_grey_F"
+	"Land_Cargo40_red_F"
 ];
 
 
@@ -83,7 +83,7 @@ R3F_LOG_CFG_transporteurs =
 	["B_Heli_Transport_03_base_F", 300],
 	["Heli_Transport_04_base_F", 300],
 	["Land_Cargo20_grey_F", 1000],
-	["Land_Cargo40_grey_F", 2000]
+	["Land_Cargo40_red_F", 2000]
 	
 	
 	
@@ -219,6 +219,6 @@ R3F_LOG_CFG_objets_deplacables =
 	"Land_BC_Court_F",
 	"Land_Atm_01_F",
 	"Land_Cargo20_grey_F",
-	"Land_Cargo40_grey_F",
+	"Land_Cargo40_red_F",
 	"CamoNet_INDP_big_F"
 ];

@@ -15,6 +15,7 @@ player createDiaryRecord ["changelog",
 [
 "Latest Updates",
 "
+<br/> [New*] Improved Server Cleanup
 <br/> [Added] License Vehicle 
 <br/> [Reduced] Concurrent active missions to 4
 <br/> [Improved] Server Cleanup

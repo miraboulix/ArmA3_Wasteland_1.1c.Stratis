@@ -12,16 +12,15 @@ client_firstSpawn = true;
 // [] execVM "addons\whitelist\whitelist.sqf";
 
 // display server watermark
-["<img size='1' image='mapConfig\logo.paa'/>",(safezoneX- 1.10)/2,-(safezoneY-2.1)/2,99999999,0,0,3054] spawn bis_fnc_dynamicText;
+["<img size='3' shadow = 0 image='mapConfig\logo.paa'/>",(safezoneH- 0.9),-(safezoneW-1.68),99999999,0,0,3054] spawn bis_fnc_dynamicText;
 
 //set client side view distance on spawn
 systemChat format["Optimizing Video Settings"];
-setViewDistance 1000;
+setViewDistance 900;
 setObjectViewDistance 900;
-setTerrainGrid 40;
+setTerrainGrid 45;
 
 
-//[] execVM "addons\credits\welcome.sqf";
 [] execVM "addons\credits\welcomeMessage.sqf";
 
 //play intro sound

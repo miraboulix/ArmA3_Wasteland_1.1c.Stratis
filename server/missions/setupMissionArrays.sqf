@@ -29,7 +29,8 @@ SideMissions =
 	["mission_Truck", 1],
 	["mission_HostileInfantry", 1],
 	["mission_Sniper", 1] ,
-	["mission_Roadblock", 1]
+	["mission_Roadblock", 1],
+	["mission_AirWreck", 1]
 
 ];
 

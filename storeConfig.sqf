@@ -236,10 +236,10 @@ accessoriesArray = compileFinal str
 	["DMS", "optic_DMS", 175, "item"],
 	["LRPS", "optic_LRPS", 175, "item"],
 	["SOS", "optic_SOS", 200, "item"],
-	["NVS", "optic_NVS", 500, "item"]
-//	["TWS", "optic_tws", 5000, "item"],
-//	["TWS MG", "optic_tws_mg", 6000, "item"],
-//	["Nightstalker", "optic_Nightstalker", 7500, "item"]
+	["NVS", "optic_NVS", 500, "item"],
+	["TWS", "optic_tws", 50000, "item"],
+	["TWS MG", "optic_tws_mg", 60000, "item"],
+	["Nightstalker", "optic_Nightstalker", 75000, "item"]
 ];
 
 // If commented, means the color/camo isn't implemented or is a duplicate of another hat
@@ -524,8 +524,8 @@ allStoreGear = compileFinal str (call headArray + call uniformArray + call vestA
 genObjectsArray = compileFinal str
 [
 	["Empty Ammo Crate", "Box_NATO_Ammo_F", 200, "ammocrate"],
-	["Medium Cargo Container", "Land_Cargo20_grey_F", 10000, "object"],
-	["Large Cargo Container", "Land_Cargo40_grey_F", 20000, "object"],
+	["Medium Grey Cargo Container", "Land_Cargo20_grey_F", 10000, "object"],
+	["Large Red Cargo Container", "Land_Cargo40_red_F", 20000, "object"],
 	["Lamp Post (Shabby)", "Land_LampShabby_F", 100, "object"],
 	["Boom Gate", "Land_BarGate_F", 150, "object"],
 	["Pipes", "Land_Pipes_Large_F", 200, "object"],

@@ -22,7 +22,10 @@ _setupObjects =
 {
 	_missionPos = markerPos _missionLocation;
 	_wreckPos = _missionPos vectorAdd ([[25 + random 20, 0, 0], random 360] call BIS_fnc_rotateVector2D);
-
+		//delete existing base parts and vehicles at location
+	_baseToDelete = nearestObjects [_wreckPos, ["All"], 25];
+	{ deleteVehicle _x } forEach _baseToDelete; 
+	
 	// Class, Position, Fuel, Ammo, Damage, Special
 	_wreck = ["O_Heli_Light_02_unarmed_F", _wreckPos, 0, 0, 1] call createMissionVehicle;
 
@@ -36,11 +39,13 @@ _setupObjects =
 
 	{ _x setVariable ["R3F_LOG_disabled", true, true] } forEach [_box1, _box2];
 
-	_aiGroup = createGroup CIVILIAN;
-	[_aiGroup, _missionPos, _nbUnits] call createCustomGroup;
+		// NPC Randomizer 
+_randomGroup = [createGroup1,createGroup2,createGroup3,createGroup4,createGroup5,createGroup6,createGroup7,createGroup8,createGroup9,createGroup10] call BIS_fnc_selectRandom;
+_aiGroup  = createGroup CIVILIAN;
+[_aiGroup, _missionPos] spawn _randomGroup;
 
 	_missionPicture = getText (configFile >> "CfgVehicles" >> typeOf _wreck >> "picture");
-	_missionHintText = "A helicopter has come down under enemy fire!";
+	_missionHintText = "A supply helicopter has come down under enemy fire!";
 };
 
 _waitUntilMarkerPos = nil;
@@ -59,7 +64,7 @@ _successExec =
 	{ _x setVariable ["R3F_LOG_disabled", false, true] } forEach [_box1, _box2];
 	deleteVehicle _wreck;
 
-	_successHintMessage = "The airwreck supplies have been collected, well done.";
+	_successHintMessage = "The airwreck supplies have been cleaned up, well done.";
 };
 
 _this call sideMissionProcessor;
